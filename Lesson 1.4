@@ -1,0 +1,16 @@
+num = int(input("Введите положительное число"))
+if num < 0:
+    print("Положительное, пожалуйста!!!")
+else:
+    numLong = len(str(num))
+    counter = 0
+    maxNumber = int(0)
+    while counter < numLong:
+        if maxNumber < num % 10:
+            maxNumber = num % 10
+            num = num // 10
+            counter = counter + 1
+        else:
+            counter = counter + 1
+            num = num // 10
+    print(maxNumber)
