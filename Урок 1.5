@@ -1,0 +1,13 @@
+revenue = int(input("Введите значение выручки"))
+costs = int(input("Введите значение издержек"))
+profit = revenue-costs
+if profit > 0:
+    print("Фирма работает в прибыль")
+    profitability = profit/revenue*100
+    print("Рентабельность выручки составила " + str(profitability) + "%")
+    numberOfEmployees = int(input("Введите численность сотрудников"))
+    print("Прибыль фирмы в расчете на одного сотрудника составляет {}".format(float("{:.2f}".format(profit/numberOfEmployees))))
+elif profit < 0:
+    print("Фирма работает в убыток")
+else:
+    print("Фирма работает в ноль")
