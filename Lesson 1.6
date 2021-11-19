@@ -1,0 +1,12 @@
+aDayResult = int(input("Введите результат первого дня"))
+bDayResult = int(input("Введите финальный результат"))
+dayNumber = 1
+
+if aDayResult > bDayResult:
+    print("Результат дня А не может быть больше результата дня Б, в данных ошибка")
+
+while aDayResult < bDayResult:
+    aDayResult = aDayResult * 1.1
+    dayNumber += 1
+print(dayNumber)
+
