@@ -1,0 +1,31 @@
+personSecondsTime = 0
+while True:
+    personSecondsTime = int(input("Введите текущее время в секундах от начале от дня"))
+    if personSecondsTime > 86399 or personSecondsTime <= 0:
+        personSecondsTime = int(input("Введите текущее время в секундах от начале от дня"))
+    else:
+        currentHours = personSecondsTime // 3600
+        currentMinutes = (personSecondsTime - (currentHours * 3600)) // 60
+        currentSeconds = personSecondsTime - (currentHours * 3600 + currentMinutes * 60)
+
+        currentHoursPrint = None
+        currentMinutesPrint = None
+        currentSecondsPrint = None
+
+        if len(str(currentHours)) == 2:
+            currentHoursPrint = currentHours
+        else:
+            currentHoursPrint = "0" + str(currentHours)
+
+        if len(str(currentMinutes)) == 2:
+            currentMinutesPrint = currentMinutes
+        else:
+            currentMinutesPrint = "0" + str(currentMinutes)
+
+        if len(str(currentSeconds)) == 2:
+            currentSecondsPrint = currentSeconds
+        else:
+            currentSecondsPrint = "0" + str(currentSeconds)
+
+        print("{}:{}:{}".format(currentHoursPrint, currentMinutesPrint, currentSecondsPrint))
+        break
